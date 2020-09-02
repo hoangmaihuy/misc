@@ -1,5 +1,9 @@
 sudo apt update
+sudo apt upgrade
 sudo apt install git g++ python3 ubuntu-restricted-extras python3-pip vim snapd ibus fzf
+
+# Fix time difference dual boot with Windows
+timedatectl set-local-rtc 1 --adjust-system-clock
 
 echo "Installing drivers"
 sudo ubuntu-drivers autoinstall
@@ -16,7 +20,7 @@ wget http://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9615/wps-o
 sudo apt install ~/Downloads/wps-office_11.1.0.9615.XA_amd64.deb
 rm -f ~/Downloads/wps-office_11.1.0.9615.XA_amd64.deb
 
-echo "Install ibus-bamboo"
+echo "Installing ibus-bamboo"
 sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
 sudo apt-get update
 sudo apt-get install ibus-bamboo
