@@ -1,3 +1,7 @@
+#!/bin/sh
+# Author: Mai Huy Hoang
+# Usage: Any Ubuntu distro base post installation
+
 sudo apt update
 sudo apt upgrade
 sudo apt install git g++ python3 ubuntu-restricted-extras python3-pip vim snapd ibus fzf
