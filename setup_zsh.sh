@@ -11,4 +11,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 echo "Symlink .zshrc"
 rm ~/.zshrc
-ln -sv .zshrc ~
+ln -sv $(pwd)/.zshrc ~
