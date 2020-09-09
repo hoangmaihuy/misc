@@ -4,7 +4,7 @@
 
 sudo apt update
 sudo apt upgrade
-sudo apt install git g++ python3 ubuntu-restricted-extras python3-pip vim snapd ibus fzf
+sudo apt install git g++ python3 ubuntu-restricted-extras python3-pip vim snapd ibus fzf zsh
 
 # Fix time difference dual boot with Windows
 timedatectl set-local-rtc 1 --adjust-system-clock
@@ -12,12 +12,15 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 echo "Installing drivers"
 sudo ubuntu-drivers autoinstall
 
-# Symlink .vimrc
-rm -f ~/.vimrc
-ln -sv $(pwd)/.vimrc ~
 
 echo "Installing Calibre"
 sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+
+echo "Installing Spotify"
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
 
 echo "Installing WPS Office"
 wget http://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9615/wps-office_11.1.0.9615.XA_amd64.deb -P ~/Downloads
@@ -37,10 +40,8 @@ rm ~/Downloads/google-chrome-stable_current_amd64.deb
 
 echo "Installing Snap packages"
 sudo snap refresh
-sudo snap install spotify
 sudo snap install code --classic
 sudo snap install pycharm-professional --classic
 sudo snap install datagrip --classic
-sudo snap install vlc
 
 
