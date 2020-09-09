@@ -38,6 +38,14 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -
 sudo apt install ~/Downloads/google-chrome-stable_current_amd64.deb
 rm ~/Downloads/google-chrome-stable_current_amd64.deb
 
+echo "Installing Skype"
+wget https://repo.skype.com/latest/skypeforlinux-64.deb -p ~/Downloads
+sudo apt install ~/Downloads/skypeforlinux-64.deb
+rm ~/Downloads/skypeforlinux-64.deb
+
+echo "Installing Telegram"
+sudo apt install telegram-desktop
+
 echo "Installing Snap packages"
 sudo snap refresh
 sudo snap install code --classic
