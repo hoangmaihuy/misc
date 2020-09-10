@@ -46,10 +46,8 @@ rm ~/Downloads/skypeforlinux-64.deb
 echo "Installing Telegram"
 sudo apt install telegram-desktop
 
-echo "Installing Snap packages"
-sudo snap refresh
-sudo snap install code --classic
-sudo snap install pycharm-professional --classic
-sudo snap install datagrip --classic
-
+echo "Installing VSCode"
+wget https://update.code.visualstudio.com/latest/linux-deb-x64/stable -O ~/Downloads/vscode-amd64.deb
+sudo apt install ~/Downloads/vscode-amd64.deb
+rm ~/Downloads/vscode-amd64.deb
 
