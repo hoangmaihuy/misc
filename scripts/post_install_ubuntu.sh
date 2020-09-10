@@ -4,7 +4,7 @@
 
 sudo apt update
 sudo apt upgrade
-sudo apt install git g++ python3 ubuntu-restricted-extras python3-pip vim snapd ibus fzf zsh
+sudo apt install git g++ python3 ubuntu-restricted-extras python3-pip vim snapd ibus fzf zsh xclip
 
 # Fix time difference dual boot with Windows
 timedatectl set-local-rtc 1 --adjust-system-clock
