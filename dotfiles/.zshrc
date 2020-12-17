@@ -11,6 +11,8 @@ fpath+=$HOME/.zsh/pure
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mew/.oh-my-zsh"
+export PATH="/opt/riscv/bin:$PATH"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse/extra/usr/lib/x86_64-linux-gnu/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -76,7 +78,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting vi-mode)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,6 +114,9 @@ alias xclip="xclip -selection c"
 alias gcob="git checkout \$(git branch | fzf)"
 alias crun="sh ~/Git/shell_scripts_and_dot_files/scripts/crun.sh"
 alias cnew="sh ~/Git/shell_scripts_and_dot_files/scripts/cnew.sh"
+alias pulseUi=/usr/local/pulse/pulseUi
+alias python=python3
+alias pip=pip3
 
 # Vim editing mode
 # bindkey -v
