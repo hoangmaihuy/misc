@@ -112,8 +112,8 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias xclip="xclip -selection c"
 alias gcob="git checkout \$(git branch | fzf)"
-alias crun="sh ~/Git/shell_scripts_and_dot_files/scripts/crun.sh"
-alias cnew="sh ~/Git/shell_scripts_and_dot_files/scripts/cnew.sh"
+alias crun="sh ~/Git/misc/scripts/crun.sh"
+alias cnew="sh ~/Git/misc/scripts/cnew.sh"
 alias pulseUi=/usr/local/pulse/pulseUi
 alias python=python3
 alias pip=pip3

@@ -1,6 +1,6 @@
 # Install zsh
-echo "Installing zsh"
-sudo apt install zsh
+# echo "Installing zsh"
+# sudo apt install zsh
 
 # Install oh-my-zsh
 echo "Installing oh-my-zsh"
